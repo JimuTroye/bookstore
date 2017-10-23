@@ -44,6 +44,7 @@
     },
     methods: {
       open() {
+//        console.log(123)
         this.$refs.dialog.open()
       },
       close() {
