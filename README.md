@@ -14,6 +14,7 @@ VueThink是一套基于Vue全家桶（Vue2.x + Vue-router2.x + Vuex）+ Thinkphp
 * 部门管理
 * 用户组管理
 * 用户管理
+* 图书管理
 ```
 
 ### 开发依赖
