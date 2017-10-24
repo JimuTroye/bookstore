@@ -1,5 +1,5 @@
 <template>
-	<el-dialog ref="dialog" custom-class="w-900 h-480 ovf-auto" title="节点列表">
+	<el-dialog ref="dialog" custom-class="w-900 h-480 ovf-auto" title="节点列表" :visible="showDialog" :before-close="closeDialog">
 		<div class="pos-rel h-60">
 			<el-input placeholder="请输入内容" v-model="keyword" class="search-btn w-300">
 				<el-button slot="append" icon="search" @click="searchMsg()"></el-button>
@@ -49,15 +49,18 @@
   export default {
     data() {
       return {
+        showDialog: false,
         keyword: '',
         tableData: []
       }
     },
     methods: {
       open() {
+        this.showDialog = true
         this.$refs.dialog.open()
       },
       closeDialog() {
+        this.showDialog = false
         this.$refs.dialog.close()
       },
       selectRule(item) {

@@ -173,7 +173,7 @@
         })
       },
       changePwd() {
-        this.$refs.changePwd.open()
+        this.$refs.changePwd.openDialog()
       },
 //			下拉菜单触发的方法
       handleMenu(val) {
@@ -192,7 +192,6 @@
           console.log(123)
           router.push(item.url)
         } else {
-          console.log(321)
           router.push(item.child[0].child[0].url)
         }
       },
